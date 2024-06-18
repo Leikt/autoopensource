@@ -24,4 +24,4 @@ jobs:
           git config user.name "Leikt"
           git add date.txt
           git commit -m "add date"
-          git push origin HEAD:master
+          git push
