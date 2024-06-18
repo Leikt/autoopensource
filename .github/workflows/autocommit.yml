@@ -1,0 +1,23 @@
+name: Auto Commit
+
+on:
+  schedule:
+    - * * * * *
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@4.1.6
+
+      - name: Edit the data.txt file
+        run: |
+          date >> data.txt
+
+      - name: Commit and push the changes
+        uses: devops-infra/action-commit-push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: Add new date to the file
