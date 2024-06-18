@@ -12,16 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Edit the data.txt file
-        run: |
-          git clone https://Leikt:{secret.TOKEN}@github.com/Leikt/autoopensource.git
-          cd autoopensource
-          
-          date >> data.txt
-          
-          git config --global user.email "leikt.solreihin@gmail.com"
-          git config --global user.name "Leikt"
-          
-          git add data.txt
-          git commit -m "feat: today"
-          git push
+      - uses: actions/checkout@v2
+
+      - run: |
+          date >> date.txt
+
+      - run: |
+          git add date.txt
+          git commit -m "add date"
+          git push origin HEAD:master
