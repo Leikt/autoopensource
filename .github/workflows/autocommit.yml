@@ -17,12 +17,12 @@ jobs:
           token: "${{secrets.TOKEN}}"
 
       - run: |
-          date > date.txt
+          python generate.py
 
       - run: |
           current_date=$(date +%Y/%m/%d-%H:%M:%S)
           git config user.email "leikt.solreihin@gmail.com"
           git config user.name "Leikt"
-          git add date.txt
+          git add .
           git commit -m "autocommit ${current_date}"
           git push
