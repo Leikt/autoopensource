@@ -23,5 +23,5 @@ jobs:
           git config user.email "leikt.solreihin@gmail.com"
           git config user.name "Leikt"
           git add date.txt
-          git commit -m "add date"
+          git commit -m "autocommit ${date +%Y-%m-%d_%H:%M:%S}"
           git push
