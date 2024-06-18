@@ -17,7 +17,7 @@ jobs:
           token: "${{secrets.TOKEN}}"
 
       - run: |
-          date >> date.txt
+          date > date.txt
 
       - run: |
           git config user.email "leikt.solreihin@gmail.com"
