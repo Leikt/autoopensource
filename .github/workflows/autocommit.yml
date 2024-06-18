@@ -3,9 +3,7 @@ name: Auto Commit
 on:
   schedule:
     - cron: "*/15 * * * *"
-
-#on:
-#  push
+  push:
 
 jobs:
   auto-commit:
