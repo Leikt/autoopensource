@@ -13,6 +13,8 @@ def main():
     init_content = template.render(now=now.strftime('%Y/%m/%d-%H:%M:%S'))
     Path('autoopensource/__init__.py').write_text(init_content, encoding='utf-8', newline='\n')
 
+    print('Code generated')
+
 
 if __name__ == '__main__':
     main()
