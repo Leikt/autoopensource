@@ -22,5 +22,5 @@ jobs:
       - name: Commit and push the changes
         uses: devops-infra/action-commit-push@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
           commit_message: Add new date to the file
