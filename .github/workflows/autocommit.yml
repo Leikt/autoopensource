@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Edit the data.txt file
         run: |
-          git clone https://leikt:{secret.TOKEN}@github.com/Leikt/autoopensource.git
+          git clone https://Leikt:{secret.TOKEN}@github.com/Leikt/autoopensource.git
           cd autoopensource
           
           date >> data.txt
