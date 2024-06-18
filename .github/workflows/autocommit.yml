@@ -18,9 +18,10 @@ jobs:
       - name: Edit the data.txt file
         run: |
           date >> data.txt
-
-      - name: Commit and push the changes
-        uses: devops-infra/action-commit-push@master
-        with:
-          github_token: ${{ secrets.TOKEN }}
-          commit_message: Add new date to the file
+          
+          git config --global user.email "leikt.solreihin@gmail.com"
+          git config --global user.name "Leikt"
+          
+          git add data.txt
+          git commit -m "feat: today"
+          git push
