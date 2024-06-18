@@ -1,11 +1,11 @@
 name: Auto Commit
 
-#on:
-#  schedule:
-#    - cron: "*/5 * * * *"
-
 on:
-  push
+  schedule:
+    - cron: "*/5 * * * *"
+
+#on:
+#  push
 
 jobs:
   auto-commit:
