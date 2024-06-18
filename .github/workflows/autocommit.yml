@@ -4,6 +4,9 @@ name: Auto Commit
 #  schedule:
 #    - cron: "*/5 * * * *"
 
+on:
+  push
+
 jobs:
   auto-commit:
     runs-on: ubuntu-latest
