@@ -1,11 +1,11 @@
 name: Auto Commit
 
-on:
-  schedule:
-    - cron: "*/5 * * * *"
-
 #on:
-#  push
+#  schedule:
+#    - cron: "*/15 * * * *"
+
+on:
+  push
 
 jobs:
   auto-commit:
@@ -23,5 +23,5 @@ jobs:
           git config user.email "leikt.solreihin@gmail.com"
           git config user.name "Leikt"
           git add date.txt
-          git commit -m "autocommit ${date +%Y-%m-%d_%H:%M:%S}"
+          git commit -m "autocommit ${date}"
           git push
