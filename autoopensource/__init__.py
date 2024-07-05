@@ -1,5 +1,5 @@
 def hello():
-    print('Hello world, the time is: 2024/07/05-08:08:25')
+    print('Hello world, the time is: 2024/07/05-16:07:23')
 
 
 if __name__ == '__main__':
